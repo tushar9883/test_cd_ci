@@ -1,4 +1,4 @@
-name: checkdemo
+name: test_cd_ci
 on:
   push:
     branches:
@@ -6,8 +6,8 @@ on:
     - test
   
 jobs:    
-  demo:
-  name: checkdemo
+  test_cd_ci:
+  name: test_cd_ci
   runs-on: macos-latest
   steps:
     - users: actions/checkout@v1
