@@ -1,27 +1,5 @@
-name: test_cd_ci
 on:
   push:
     branches:
-    - master
-    - test
-  
-jobs:    
-  test_cd_ci:
-  name: test_cd_ci
-  runs-on: macos-latest
-  steps:
-    - users: actions/checkout@v1
-    - users: actions/setup-java@v1
-      with:
-        java-version: '12.x'
-    - users: subosito/flutter-action@v1
-      with:
-        channel: 'stable'
-    - users: Get Branch Name
-      id: branch
-      run: echo "::set-output name=branch::${GITHUB_REF##*/}"
-    - users: Get Today Date
-      id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
-        
-        
+    - main
+    - release/*
