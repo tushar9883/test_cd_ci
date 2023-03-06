@@ -6,7 +6,7 @@ on:
     - test
   
 jobs:    
-  checkdemo:
+  demo:
   name: checkdemo
   runs-on: macos-latest
   steps:
